@@ -37,3 +37,8 @@ secrets.json
 
 # Visual Studio
 .vs/
+bin/
+obj/
+*.db
+*.sqlite
+Migrations/
