@@ -54,7 +54,9 @@ A estrutura do projeto é organizada da seguinte forma:
 + .gitignore - Arquivo de Ignoração do Git
 
 # 5. Funcionalidades Implementadas
-
++ Listar cursos: Listar todos os cursos
++ Matrículas, Finalização, Visualização: Realização da Matrícula, finalização e visualização da mesma.
++ Realizar pagamento de matrícula
 + Autenticação e Autorização: Diferenciação entre usuários comuns e administradores.
 + API RESTful: Exposição de endpoints para operações CRUD via API.
 + Documentação da API: Documentação automática dos endpoints da API utilizando Swagger.
@@ -63,7 +65,7 @@ A estrutura do projeto é organizada da seguinte forma:
 
 ### Pré-requisitos
 + .NET SDK 8.0 ou superior
-+ SQL Server
++ SQLite
 + Visual Studio 2022 ou superior (ou qualquer IDE de sua preferência)
 + Git
 
@@ -75,32 +77,27 @@ A estrutura do projeto é organizada da seguinte forma:
 
       git clone https://github.com/Landreotti/education-platform.git
 
-+ cd Blog4Devs: 
++ cd EducationPlatform: 
 
       cd EducationPlatform
 
-**2. Configuração do Banco de Dados**:
+**2. Executar a API**:
 
-+ No arquivo appsettings.json, configure a string de conexão do SQL Server.
-+ Rode o projeto para que a configuração do Seed crie o banco e popule com os dados básicos
-
-**3. Executar a API**:
-
-+ cd src/Blog.Api/
++ cd EducationPlatform
 + dotnet run
-+ Acesse a documentação da API em: [Swagger](http://localhost:5001/swagger).
++ Acesse a documentação da API em: [Swagger](http://localhost:5295/swagger).
 
-# 4. Instruções de Configuração
+# 7. Instruções de Configuração
 
 + JWT para API: As chaves de configuração do JWT estão no appsettings.json.
 + Migrações do Banco de Dados: As migrações são gerenciadas pelo Entity Framework Core. Não é necessário aplicar devido a configuração do Seed de dados.
 
-# 5. Documentação da API
+# 8. Documentação da API
 A documentação da API está disponível através do Swagger. Após iniciar a API, acesse a documentação em:
 
-[Swagger](http://localhost:5001/swagger).
+[Swagger](http://localhost:5295/swagger).
 
-# 6. Avaliação
+# 9. Avaliação
 
 + Este projeto é parte de um curso acadêmico e não aceita contribuições externas.
 + Para feedbacks ou dúvidas utilize o recurso de Issues
