@@ -75,11 +75,18 @@ A estrutura do projeto é organizada da seguinte forma:
 
 + git clone:
 
-      git clone https://github.com/Landreotti/education-platform.git
+        git clone https://github.com/Landreotti/education-platform.git
 
 + cd EducationPlatform: 
 
-      cd EducationPlatform
+        cd EducationPlatform.Api
+
+ + Rodar os testes:
+ +     dotnet test --collect:"XPlat Code Coverage" 
+
++ Gerar relatório HTML:
++     reportgenerator -reports:"TestResults/**/*.cobertura.xml" -targetdir:"coveragereport" -reporttypes:Html
+
 
 **2. Executar a API**:
 
