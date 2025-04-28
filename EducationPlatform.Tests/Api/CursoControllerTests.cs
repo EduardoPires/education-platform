@@ -36,5 +36,15 @@ namespace EducationPlatform.Tests.Api
             var cursos = Assert.IsAssignableFrom<IEnumerable<Curso>>(okResult.Value);
             Assert.Single(cursos);
         }
+
+        [Fact]
+        public async Task Deve_Retornar_NotFound_Se_Curso_Nao_Existir()
+        {
+            var controller = new CursoController(_context);
+
+            var result = await controller.GetCurso(999); // ID que não existe
+
+            Assert.IsType<NotFoundResult>(result);
+        }
     }
 }

@@ -37,5 +37,16 @@ namespace EducationPlatform.Tests.Api
             var alunos = Assert.IsAssignableFrom<IEnumerable<Aluno>>(okResult.Value);
             Assert.Single(alunos);
         }
+
+        [Fact]
+        public async Task Matricular_Deve_Retornar_NotFound_Se_Aluno_Nao_Existir()
+        {
+            var controller = new AlunoController(_context);
+
+            var result = await controller.Matricular(999, 1);
+
+            var notFound = Assert.IsType<NotFoundObjectResult>(result);
+            Assert.Equal("Aluno não encontrado.", notFound.Value);
+        }
     }
 }
