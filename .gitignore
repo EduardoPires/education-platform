@@ -1,0 +1,39 @@
+# Build results
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+
+# User-specific files
+*.user
+*.vspscc
+*.suo
+*.userosscache
+*.sln.docstates
+
+# DotCover
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# Logs
+*.log
+
+# Database
+*.mdf
+*.ldf
+*.db
+
+# EF Migrations
+Migrations/
+
+# Secrets
+secrets.json
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
